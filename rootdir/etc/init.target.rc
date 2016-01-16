@@ -171,6 +171,7 @@ on property:service.bootanim.exit=1
     swapon_all fstab.qcom
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/swappiness 100
+    start redmi
 
 service cnd /system/bin/cnd
     class late_start
@@ -197,17 +198,17 @@ on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
 
 service ims_rtp_daemon /system/bin/ims_rtp_daemon
-   class main
-   user system
-   socket ims_rtpd stream 0660 system radio
-   group radio net_raw diag qcom_diag log
-   disabled
+    class main
+    user system
+    socket ims_rtpd stream 0660 system radio
+    group radio net_raw diag qcom_diag log
+    disabled
 
 service imscmservice /system/bin/imscmservice
-   class main
-   user system
-   group radio net_raw diag qcom_diag log
-   disabled
+    class main
+    user system
+    group radio net_raw diag qcom_diag log
+    disabled
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
@@ -217,4 +218,10 @@ service memcheck /system/bin/memcheck
     user root
     group root
     class late_start
+    oneshot
+
+service redmi /system/bin/sh /system/etc/init.redmi.sh
+    class late_start
+    user root
+    disabled
     oneshot
