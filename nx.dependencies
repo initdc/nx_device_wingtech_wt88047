@@ -1,9 +1,8 @@
 [
   {
-    "remote":      "github",
-    "repository": "kumajaya/android_device_cyanogen_msm8916-common",
-    "target_path": "device/cyanogen/msm8916-common",
-    "revision":   "cm-13.0"
+    "remote":     "bitbucket",
+    "repository": "nexusxm/device_cyanogen_msm8916-common",
+    "target_path": "device/cyanogen/msm8916-common"
   },
   {
     "remote":      "github",
@@ -12,16 +11,14 @@
     "revision":   "cm-13.0"
   },
   {
-    "remote":      "github",
-    "repository": "kumajaya/android_kernel_cyanogen_msm8916",
-    "target_path": "kernel/cyanogen/msm8916",
-    "revision":   "cm-13.0-amss-2.1-wt88047"
+    "remote":     "bitbucket",
+    "repository": "nexusxm/kernel_cyanogen_msm8916",
+    "target_path": "kernel/cyanogen/msm8916"
   },
   {
-    "remote":      "github",
-    "repository": "kumajaya/proprietary_vendor_wingtech",
-    "target_path": "vendor/wingtech",
-    "revision":   "cm-13.0"
+    "remote":     "bitbucket",
+    "repository": "nexusxm/proprietary_vendor_wingtech",
+    "target_path": "vendor/wingtech"
   },
   {
     "remote":      "github",
